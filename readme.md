@@ -2,9 +2,12 @@
 
 Kuretan Avatar Text(KAT)はVR Chat上に任意の文章を表示できるUnityPackegeです。KAT SubtitleやKAT Charmapmakerと組み合わせることで、音声認識した文章をお好みのフォントで表示させることができます。
 
+
 ## 導入方法　Unity上での作業
 
 以下の作業を行う前にバックアップの作成を強く推奨します。本ソフトウェアの使用により既存のUnity Packageが破損したとしても私は一切の責任をとりません。またVRC SDK3は最新のものを利用してください。
+
+0.[Kuretan Avatar Text \- kuretan's lab \- BOOTH](https://kuretan.booth.pm/items/3962022)または[Releases · Krekun/Kuretan\_Avatar\_Text](https://github.com/Krekun/Kuretan_Avatar_Text/releases)からKATのUnityPackgeを入手してください。
 
 1.付属のUnityPackgeを開き、KATをimportします。KATの動作にはVRC SDK Avatar 3.0が必要となるので、そちらも忘れずにimportしてください。
 
