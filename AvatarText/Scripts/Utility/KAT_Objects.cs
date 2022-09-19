@@ -1,5 +1,5 @@
 /*
-	Avatar Text for VRChat
+	Kuretan Avatar Text
 	Copyright (C) 2022 Kuretan / Evan Tran
 	This program is free software: you can redistribute it and/or modify
 	it under the terms of the GNU General Public License as published by
@@ -34,15 +34,15 @@ namespace Kuretan.AvatarTextTools.Utility
 			Material textMaterial;
 			switch (settings.TextLength){
 				case 128: {
-					textMaterial = Resources.Load<Material>("KAT_Misc/KAT_Text_128");
+					textMaterial = Resources.Load<Material>("Materials/KAT_Text_128");
 					break;
 				}
 				case 256: {
-					textMaterial = Resources.Load<Material>("KAT_Misc/KAT_Text_256");
+					textMaterial = Resources.Load<Material>("Materials/KAT_Text_128");
 					break;
 				}
 				case 512: {
-					textMaterial = Resources.Load<Material>("KAT_Misc/KAT_Text_512");
+					textMaterial = Resources.Load<Material>("Materials/KAT_Text_512");
 					break;
 				}
 				default:
@@ -51,9 +51,8 @@ namespace Kuretan.AvatarTextTools.Utility
 					return false;	
 				}
 			}
-			Material backgroundMaterial = Resources.Load<Material>("KAT_Misc/KAT_Box_Blue");
-			Material loadingMaterial = Resources.Load<Material>("KAT_Misc/KAT_Loading");
-			// textMaterial = Resources.Load<Material>("KAT_Misc/KAT_Text_512");
+			Material backgroundMaterial = Resources.Load<Material>("Materials/KAT_Backgound");
+			Material loadingMaterial = Resources.Load<Material>("Materials/KAT_Loading");
 			Transform avatarRootTransform = avatarDescriptor.gameObject.transform;
 			Transform avatarAttachmentTransform = null;
 			Vector3 avatarAttachmentOffset = new Vector3(0.0f, 1.0f, 0.4f);
@@ -88,7 +87,7 @@ namespace Kuretan.AvatarTextTools.Utility
 
 			GameObject katObject = new GameObject("KuretanAvatarText");
 			katObject.transform.SetParent(avatarRootTransform);
-			katObject.SetActive(false);
+			// katObject.SetActive(false);
 
 			GameObject constraintObject = new GameObject("Constraint");
 			constraintObject.transform.SetParent(katObject.transform);
@@ -145,10 +144,9 @@ namespace Kuretan.AvatarTextTools.Utility
 			GameObject backgroundObject= GameObject.CreatePrimitive(PrimitiveType.Plane);
 			backgroundObject.name = "Background";
 			backgroundObject.transform.SetParent(textObject.transform);
-//-0.2
-			backgroundObject.transform.position = new Vector3(0, -0.12f, -0.01f);
+			backgroundObject.transform.position = new Vector3(0, -0.17f, -0.01f);
 			backgroundObject.transform.rotation = Quaternion.Euler(90, 0, 0);
-			backgroundObject.transform.localScale = new Vector3(0.104f, 0.367f, 0.15f);
+			backgroundObject.transform.localScale = new Vector3(0.104f, 0.367f, 0.111f);
 
 			GameObject.DestroyImmediate(backgroundObject.GetComponent<MeshCollider>());
 
