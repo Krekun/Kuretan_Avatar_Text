@@ -38,7 +38,7 @@ namespace Kuretan.AvatarTextTools.Utility
 					break;
 				}
 				case 256: {
-					textMaterial = Resources.Load<Material>("Materials/KAT_Text_128");
+					textMaterial = Resources.Load<Material>("Materials/KAT_Text_256");
 					break;
 				}
 				case 512: {
